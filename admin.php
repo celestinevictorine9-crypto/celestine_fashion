@@ -1,4 +1,5 @@
 
+
 <?php
 require_once __DIR__ . '/auth.php';
 adminOnly();
@@ -60,7 +61,19 @@ try {
         $photoCol = $config['photo_col'];
         $action = $_POST['action'] ?? '';
         $id = (int)($_POST['id'] ?? 0);
+// SUPPRIMER UNE COMMANDE CLIENT
+if ($action === 'supprimer_commande') {
+    if ($id < 1) {
+        throw new RuntimeException('Identifiant de commande invalide.');
+    }
 
+    $stmt = $pdo->prepare("DELETE FROM commandes WHERE id = ?");
+    $stmt->execute([$id]);
+
+    header('Location: admin.php?message=' .
+        urlencode('Commande supprimée avec succès.') . '#commandes');
+    exit;
+}
         // SUPPRIMER
         if ($action === 'supprimer') {
             if ($id < 1) {
@@ -581,16 +594,35 @@ th {
                 <thead>
                     <tr>
                         <?php foreach (array_keys($commandes[0]) as $col): ?>
-                            <th><?= hcrud($col) ?></th>
-                        <?php endforeach; ?>
+    <th><?= hcrud($col) ?></th>
+<?php endforeach; ?>
+<th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach ($commandes as $commande): ?>
                         <tr>
                             <?php foreach ($commande as $val): ?>
-                                <td><?= hcrud($val) ?></td>
-                            <?php endforeach; ?>
+    <td><?= hcrud($val) ?></td>
+<?php endforeach; ?>
+
+<td>
+    <form method="POST"
+          onsubmit="return confirm('Voulez-vous vraiment supprimer cette commande ?');">
+        <input type="hidden" name="csrf"
+               value="<?= hcrud($csrf) ?>">
+        <input type="hidden" name="type"
+               value="<?= hcrud($type) ?>">
+        <input type="hidden" name="action"
+               value="supprimer_commande">
+        <input type="hidden" name="id"
+               value="<?= (int)($commande['id'] ?? 0) ?>">
+
+        <button class="danger" type="submit">
+            Supprimer
+        </button>
+    </form>
+</td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
