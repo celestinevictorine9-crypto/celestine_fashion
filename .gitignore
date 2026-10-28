@@ -1,0 +1,16 @@
+
+
+.env
+.env.*
+!.env.example
+/vendor/
+*.log
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Sauvegardes de bases de données
+*.sql
+*.sql.*
+*.dump
+*.bak
