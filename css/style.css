@@ -1593,7 +1593,7 @@ nav.navigation-pro {
     }
 
     .hero-avantages strong {
-        font-size: 10px;
+        font-size: 40px;
     }
 
     .hero-avantages small {
@@ -1601,3 +1601,15 @@ nav.navigation-pro {
     }
 }
 
+.logo-celestine {
+    display: inline-flex;
+    align-items: center;
+    max-width: 250px;
+    overflow: hidden;
+}
+
+.logo-celestine img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}

@@ -322,7 +322,7 @@ $nombrePanier = array_sum($_SESSION['panier']);
             <img
                 src="images/logo.png"
                 alt="Logo Célestine Fashion"
-                class="logo-image"
+                class="Logo-image"
             >
         </a>
 
