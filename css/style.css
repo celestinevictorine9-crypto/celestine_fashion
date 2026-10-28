@@ -654,3 +654,253 @@ th {
     }
 }
 
+/* =====================================
+   DESIGN MODERNE - CELESTINE FASHION
+   ===================================== */
+
+:root {
+    --rose: #e91e63;
+    --noir: #241b24;
+    --fond: #faf7f8;
+    --rose-clair: #fff0f5;
+    --texte-doux: #77717a;
+}
+
+/* Collection */
+#collection {
+    padding: 65px 5%;
+}
+
+#collection .titre {
+    font-size: clamp(28px, 3vw, 38px);
+    font-weight: 800;
+    letter-spacing: -0.7px;
+    color: var(--noir);
+}
+
+#collection .sous-titre {
+    max-width: 650px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+    color: var(--texte-doux);
+}
+
+/* Recherche élégante */
+.recherche input {
+    max-width: 520px;
+    padding: 15px 20px;
+    border: 1px solid #e8dfe4;
+    border-radius: 30px;
+    background: #fff;
+    outline: none;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+.recherche input:focus {
+    border-color: var(--rose);
+    box-shadow: 0 0 0 4px rgba(233, 30, 99, .10);
+}
+
+/* Filtres par catégorie */
+.filtres {
+    gap: 10px;
+    margin-bottom: 32px;
+}
+
+.filtres button {
+    padding: 11px 21px;
+    border: 1px solid #eadfe5;
+    border-radius: 30px;
+    color: var(--noir);
+    font-weight: 600;
+    transition: .2s ease;
+}
+
+.filtres button.actif,
+.filtres button:hover {
+    background: var(--rose);
+    border-color: var(--rose);
+    color: white;
+}
+
+/* Grille de produits */
+.grille {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
+/* Carte individuelle */
+.produit {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    border: 1px solid #f0e9ed;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 5px 22px rgba(36, 27, 36, .045);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.produit:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(36, 27, 36, .11);
+}
+
+/* Photos uniformes */
+.produit img {
+    display: block;
+    width: 100%;
+    height: 270px;
+    object-fit: contain;
+    object-position: center;
+    padding: 10px;
+    background: #fff;
+}
+
+/* Informations */
+.infos {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 18px;
+}
+
+.categorie {
+    color: var(--rose);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    margin-bottom: 9px;
+}
+
+.infos h3 {
+    color: var(--noir);
+    font-size: 18px;
+    line-height: 1.45;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: var(--texte-doux);
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 44px;
+}
+
+.prix {
+    color: var(--rose);
+    font-size: 23px;
+    font-weight: 800;
+    margin: 16px 0 12px;
+}
+
+.stock {
+    color: #5f6b62;
+    font-size: 13px;
+    margin-bottom: 14px;
+}
+
+/* Bouton d'ajout au panier */
+.produit form {
+    margin-top: auto;
+}
+
+.produit form button {
+    width: 100%;
+    padding: 13px 10px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--rose);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .2s, transform .2s;
+}
+
+.produit form button:hover {
+    background: #c2185b;
+}
+
+.produit form button:active {
+    transform: scale(.98);
+}
+
+/* Tablettes et petits ordinateurs */
+@media (max-width: 1100px) {
+    .grille {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .produit img {
+        height: 250px;
+    }
+}
+
+/* Petites tablettes */
+@media (max-width: 800px) {
+    #collection {
+        padding: 45px 4%;
+    }
+
+    .grille {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .produit img {
+        height: 230px;
+    }
+}
+
+/* Téléphones */
+@media (max-width: 480px) {
+    #collection {
+        padding: 35px 12px;
+    }
+
+    .grille {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .produit {
+        border-radius: 11px;
+    }
+
+    .produit img {
+        height: 170px;
+        padding: 5px;
+    }
+
+    .infos {
+        padding: 12px;
+    }
+
+    .infos h3 {
+        font-size: 15px;
+    }
+
+    .description {
+        font-size: 12px;
+        min-height: 38px;
+    }
+
+    .prix {
+        font-size: 19px;
+        margin: 12px 0;
+    }
+
+    .stock {
+        font-size: 12px;
+    }
+
+    .produit form button {
+        padding: 11px 5px;
+        font-size: 12px;
+    }
+}
+
