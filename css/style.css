@@ -904,3 +904,700 @@ th {
     }
 }
 
+/* ===================================
+   EN-TETE PROFESSIONNEL - CELESTINE
+   =================================== */
+
+.entete-pro {
+    width: 100%;
+    background: #ffffff;
+    font-family: 'Montserrat', Arial, sans-serif;
+    box-shadow: 0 4px 22px rgba(40, 20, 30, 0.07);
+    position: relative;
+    z-index: 100;
+}
+
+/* Ligne supérieure */
+.barre-marque {
+    max-width: 1400px;
+    min-height: 105px;
+    margin: 0 auto;
+    padding: 18px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Logo */
+.logo-celestine {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: #29212a;
+    text-decoration: none;
+}
+
+.logo-lettre {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #a8325b;
+    color: #a8325b;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 34px;
+    font-weight: 700;
+    border-radius: 50%;
+}
+
+.logo-texte {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.logo-texte strong {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+}
+
+.logo-texte small {
+    color: #a8325b;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* Slogan */
+.slogan-entete {
+    color: #817780;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+/* Panier */
+.panier-entete {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 11px 16px;
+    color: #29212a;
+    text-decoration: none;
+    border: 1px solid #eadce2;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+.panier-entete:hover {
+    border-color: #a8325b;
+    color: #a8325b;
+}
+
+.nombre-panier {
+    min-width: 24px;
+    height: 24px;
+    padding: 0 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #a8325b;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+/* Navigation */
+.navigation-pro {
+    min-height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    padding: 12px 5%;
+    border-top: 1px solid #f1e9ed;
+    background: #fffafb;
+    flex-wrap: wrap;
+}
+
+.navigation-pro .lien-nav {
+    position: relative;
+    padding: 7px 0;
+    color: #342b34;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.navigation-pro .lien-nav:hover {
+    color: #a8325b;
+}
+
+.navigation-pro .lien-nav::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #a8325b;
+    transition: width 0.2s ease;
+}
+
+.navigation-pro .lien-nav:hover::after {
+    width: 100%;
+}
+
+/* Bouton Administration */
+.navigation-pro .lien-admin {
+    padding: 10px 17px;
+    border-radius: 6px;
+    background: #a8325b;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.navigation-pro .lien-admin:hover {
+    background: #802344;
+}
+
+/* Adaptation aux téléphones */
+@media (max-width: 650px) {
+    .barre-marque {
+        min-height: auto;
+        padding: 17px 4%;
+        flex-wrap: wrap;
+        gap: 13px;
+    }
+
+    .logo-lettre {
+        width: 43px;
+        height: 43px;
+        font-size: 28px;
+    }
+
+    .logo-texte strong {
+        font-size: 19px;
+    }
+
+    .logo-texte small {
+        font-size: 9px;
+    }
+
+    .slogan-entete {
+        display: none;
+    }
+
+    .panier-entete {
+        padding: 9px 11px;
+        font-size: 12px;
+    }
+
+    .navigation-pro {
+        gap: 12px 20px;
+        padding: 13px 10px;
+    }
+
+    .navigation-pro .lien-nav {
+        font-size: 12px;
+    }
+
+    .navigation-pro .lien-admin {
+        padding: 9px 12px;
+    }
+}
+
+
+/* Logo officiel Célestine Fashion */
+.logo-celestine {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-image {
+    display: block;
+    width: 180px;
+    height: 95px;
+    object-fit: contain;
+    object-position: left center;
+    background: transparent;
+}
+
+@media (max-width: 650px) {
+    .logo-image {
+        width: 135px;
+        height: 75px;
+    }
+}
+
+/* ==========================================
+   NOUVEAU DESIGN CELESTINE FASHION
+   ========================================== */
+
+:root {
+    --rose: #e50050;
+    --rose-fonce: #c90045;
+    --or: #e8bb4d;
+    --noir: #151515;
+    --fond: #ffffff;
+}
+
+/* Barre de services */
+.promo {
+    min-height: 50px;
+    padding: 12px 4%;
+    background: linear-gradient(100deg, #cf0045, #ec0055);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.promo-item {
+    white-space: nowrap;
+}
+
+/* En-tête blanc */
+header.entete-pro {
+    display: block;
+    padding: 0;
+    background: #fff;
+    color: #111;
+    box-shadow: 0 2px 12px #00000008;
+}
+
+.barre-marque {
+    width: 100%;
+    max-width: 1600px;
+    min-height: 145px;
+    margin: auto;
+    padding: 20px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo-celestine {
+    flex-shrink: 0;
+}
+
+.logo-image {
+    display: block;
+    width: 330px;
+    height: 125px;
+    object-fit: contain;
+    object-position: left center;
+    background: transparent;
+}
+
+/* Recherche dans l'en-tête */
+.recherche-entete {
+    flex: 1;
+    max-width: 550px;
+    min-width: 180px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    background: #f2f2f4;
+    border-radius: 35px;
+    overflow: hidden;
+}
+
+.recherche-entete input {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0 22px;
+    border: 0;
+    outline: none;
+    background: transparent;
+    font: inherit;
+    font-size: 14px;
+}
+
+.recherche-entete button {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    margin-right: 2px;
+    border-radius: 50%;
+    background: var(--rose);
+    color: #fff;
+    font-size: 28px;
+}
+
+.recherche-entete button:hover {
+    background: var(--rose-fonce);
+}
+
+/* Compte et panier */
+.compte-entete,
+.panier-entete {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    color: #151515;
+    text-decoration: none;
+    border: 0;
+    background: transparent;
+    padding: 8px;
+}
+
+.compte-entete strong,
+.panier-entete strong {
+    display: block;
+    font-size: 14px;
+}
+
+.compte-entete small,
+.panier-entete small {
+    display: block;
+    margin-top: 5px;
+    color: #777;
+    font-size: 12px;
+}
+
+.icone-entete {
+    font-size: 30px;
+}
+
+.nombre-panier {
+    position: absolute;
+    top: -3px;
+    right: -5px;
+    min-width: 25px;
+    height: 25px;
+    padding: 0 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: var(--rose);
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Menu de navigation */
+nav.navigation-pro {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    padding: 0 4%;
+    min-height: 62px;
+    border-top: 1px solid #eeeeee;
+    background: #fff;
+}
+
+.navigation-pro .lien-nav {
+    display: flex;
+    align-items: center;
+    min-height: 62px;
+    padding: 0 27px;
+    color: #171717;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navigation-pro .lien-nav:hover,
+.navigation-pro .lien-nav.actif {
+    color: var(--rose);
+    border-bottom-color: var(--rose);
+}
+
+/* Grande bannière de mode */
+.hero {
+    position: relative;
+    min-height: 570px;
+    padding: 65px 7%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(12, 15, 16, .96) 0%,
+            rgba(12, 15, 16, .82) 36%,
+            rgba(12, 15, 16, .18) 72%,
+            rgba(12, 15, 16, .10) 100%
+        ),
+        url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=2000&auto=format&fit=crop')
+        center 35% / cover no-repeat;
+}
+
+.hero-contenu {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 720px;
+}
+
+.hero-signature {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 20px;
+    font-size: 17px;
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+
+.hero-signature span {
+    width: 48px;
+    height: 2px;
+    background: #fff;
+}
+
+.hero h1 {
+    margin-bottom: 18px;
+    font-size: clamp(38px, 5vw, 70px);
+    line-height: 1.12;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--or);
+}
+
+.hero p {
+    margin-bottom: 26px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #f3f3f3;
+}
+
+.hero .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 17px 27px;
+    border-radius: 20px;
+    background: var(--rose);
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.hero .btn span {
+    font-size: 25px;
+}
+
+.hero .btn:hover {
+    background: var(--rose-fonce);
+}
+
+/* Avantages dans la bannière */
+.hero-avantages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 36px;
+}
+
+.hero-avantages > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-right: 18px;
+    border-right: 1px solid #ffffff65;
+    font-size: 24px;
+}
+
+.hero-avantages > div:last-child {
+    border-right: 0;
+}
+
+.hero-avantages strong,
+.hero-avantages small {
+    display: block;
+    color: #fff;
+}
+
+.hero-avantages strong {
+    font-size: 12px;
+}
+
+.hero-avantages small {
+    margin-top: 5px;
+    font-size: 11px;
+    font-weight: normal;
+    color: #ddd;
+}
+
+/* Boutique et titres */
+#boutique {
+    background: #fff;
+}
+
+.titre {
+    color: #171717;
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.sous-titre {
+    line-height: 1.7;
+}
+
+/* Tablettes */
+@media (max-width: 1100px) {
+    .barre-marque {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .logo-image {
+        width: 260px;
+        height: 100px;
+    }
+
+    .recherche-entete {
+        order: 3;
+        flex-basis: 100%;
+        max-width: none;
+    }
+
+    .navigation-pro .lien-nav {
+        padding: 0 17px;
+    }
+
+    .hero {
+        min-height: 510px;
+    }
+}
+
+/* Téléphones */
+@media (max-width: 650px) {
+    .promo {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px 14px;
+        padding: 10px;
+        font-size: 11px;
+    }
+
+    .promo-reseaux {
+        display: none;
+    }
+
+    .barre-marque {
+        padding: 12px 4%;
+        gap: 10px;
+    }
+
+    .logo-image {
+        width: 190px;
+        height: 78px;
+    }
+
+    .compte-entete {
+        display: none;
+    }
+
+    .panier-entete {
+        padding: 5px;
+    }
+
+    .panier-entete .icone-entete {
+        font-size: 24px;
+    }
+
+    .panier-entete strong {
+        font-size: 12px;
+    }
+
+    .panier-entete small {
+        font-size: 10px;
+    }
+
+    .recherche-entete {
+        height: 47px;
+    }
+
+    .recherche-entete button {
+        width: 43px;
+        height: 43px;
+    }
+
+    nav.navigation-pro {
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0 6px;
+    }
+
+    .navigation-pro .lien-nav {
+        min-height: 43px;
+        padding: 0 10px;
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 45px 22px;
+        background-position: 58% center;
+    }
+
+    .hero-contenu {
+        max-width: 100%;
+    }
+
+    .hero-signature {
+        gap: 9px;
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .hero-signature span {
+        width: 25px;
+    }
+
+    .hero h1 {
+        font-size: clamp(34px, 9vw, 48px);
+        letter-spacing: -1px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero-avantages {
+        gap: 14px;
+        margin-top: 28px;
+    }
+
+    .hero-avantages > div {
+        gap: 6px;
+        padding-right: 10px;
+        font-size: 19px;
+    }
+
+    .hero-avantages strong {
+        font-size: 10px;
+    }
+
+    .hero-avantages small {
+        font-size: 9px;
+    }
+}
+

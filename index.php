@@ -282,12 +282,20 @@ $nombrePanier = array_sum($_SESSION['panier']);
 <!DOCTYPE html>
 <html lang="fr">
 
-<head>
-<meta charset="UTF-8">
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
 
-<title>Celestine_fashion - Vente de vêtements homme et femme</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Célestine Fashion | Boutique de mode homme et femme</title>
+
+    <meta name="description" content="Découvrez Célestine Fashion : une sélection de vêtements pour homme et femme, avec un style élégant et moderne.">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
 
 
 </head>
@@ -296,66 +304,113 @@ content="width=device-width, initial-scale=1.0">
 
 <!-- PROMOTION -->
 
+
+<!-- BARRE SUPÉRIEURE -->
 <div class="promo">
-    Bienvenue chez Celestine_fashion
-    — Découvrez nos nouvelles collections !
+    <div class="promo-item">🚚 Livraison rapide partout en RDC</div>
+    <div class="promo-item">🛡️ Paiement sécurisé</div>
+    <div class="promo-item">🎧 Service client 7j/7</div>
+    <div class="promo-item promo-reseaux">Facebook · Instagram · TikTok · WhatsApp</div>
 </div>
 
-<!-- MENU -->
-<link rel="stylesheet" href="css/style.css">
-<header>
+<!-- EN-TÊTE PRINCIPAL -->
+<header class="entete-pro">
 
-    <h2>CELESTINE FASHION</h2>
+    <div class="barre-marque">
 
-    <nav>
-        <a href="#accueil">Accueil</a>
-        <a href="#boutique">Boutique</a>
-
-        <a href="#boutique"
-           onclick="choisirCategorie('Homme')">
-            Hommes
+        <a href="#accueil" class="logo-celestine">
+            <img
+                src="images/logo.png"
+                alt="Logo Célestine Fashion"
+                class="logo-image"
+            >
         </a>
 
-        <a href="#boutique"
-           onclick="choisirCategorie('Femme')">
-            Femmes
+        <form class="recherche-entete" onsubmit="return rechercherDepuisEntete()">
+            <input
+                type="search"
+                id="recherche-entete"
+                placeholder="Rechercher un article, une catégorie..."
+                aria-label="Rechercher un article"
+            >
+            <button type="submit" aria-label="Rechercher">⌕</button>
+        </form>
+
+        <a href="login.php" class="compte-entete">
+            <span class="icone-entete">♙</span>
+            <span>
+                <strong>Mon compte</strong>
+                <small>Se connecter</small>
+            </span>
         </a>
 
-        <a href="#panier">
-            Panier (<?= $nombrePanier ?>)
-        </a>
-
-        <a href="#contact">Contact</a>
-<a href="login.php">Administration</a>
-    </nav>
-
-</header>
-
-<!-- ACCUEIL -->
-
-<div class="hero" id="accueil">
-
-    <div class="hero-contenu">
-
-        <h1>
-            Vente de vêtements homme et femme.
-        </h1>
-
-        <p>
-            
-            Découvrez nos collections modernes,
-            élégantes et accessibles.
-            La mode qui révèle
-            votre élégance
-        </p>
-
-        <a href="#boutique" class="btn">
-            Acheter maintenant
+        <a href="#panier" class="panier-entete">
+            <span class="icone-entete">🛒</span>
+            <span>
+                <strong>Panier</strong>
+                <small><?= $nombrePanier ?> article(s)</small>
+            </span>
+            <span class="nombre-panier"><?= $nombrePanier ?></span>
         </a>
 
     </div>
 
+    <nav class="navigation-pro">
+        <a href="#accueil" class="lien-nav actif">Accueil</a>
+        <a href="#boutique" class="lien-nav">Boutique</a>
+
+        <a href="#boutique" class="lien-nav"
+           onclick="choisirCategorie('Homme')">Hommes⌄</a>
+
+        <a href="#boutique" class="lien-nav"
+           onclick="choisirCategorie('Femme')">Femmes⌄</a>
+
+        <a href="#boutique" class="lien-nav"
+           onclick="choisirCategorie('Tous')">Accessoires⌄</a>
+
+        <a href="#contact" class="lien-nav">Contact</a>
+    </nav>
+
+</header>
+
+
+
+<!-- BANNIÈRE D'ACCUEIL -->
+<div class="hero" id="accueil">
+
+    <div class="hero-contenu">
+
+        <div class="hero-signature">
+            <span></span>
+            CELESTINE FASHION
+            <span></span>
+        </div>
+
+        <h1>
+            Vente de vêtements
+            <span>homme et femme.</span>
+        </h1>
+
+        <p>
+            Découvrez nos collections modernes, élégantes et accessibles.
+            <br>
+            La mode qui révèle votre élégance.
+        </p>
+
+        <a href="#boutique" class="btn">
+            Acheter maintenant <span>→</span>
+        </a>
+
+        <div class="hero-avantages">
+            <div>🚚 <span><strong>Livraison rapide</strong><small>Partout en RDC</small></span></div>
+            <div>🛡️ <span><strong>Paiement sécurisé</strong><small>Service fiable</small></span></div>
+            <div>🎧 <span><strong>Service client</strong><small>7j/7</small></span></div>
+        </div>
+
+    </div>
+
 </div>
+
 
 <!-- BOUTIQUE -->
 
@@ -640,6 +695,20 @@ content="width=device-width, initial-scale=1.0">
 <!-- JAVASCRIPT -->
 
 <script>
+
+function rechercherDepuisEntete() {
+    const champEntete = document.getElementById("recherche-entete");
+    const champBoutique = document.getElementById("recherche");
+
+    champBoutique.value = champEntete.value;
+    afficherProduits();
+
+    document.getElementById("boutique").scrollIntoView({
+        behavior: "smooth"
+    });
+
+    return false;
+}
 
 let categorieActive = "Tous";
 
